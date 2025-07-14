@@ -1,0 +1,36 @@
+.creative-contact-card {
+  position: relative;
+  overflow: visible;
+  z-index: 0;
+}
+.creative-contact-card::before {
+  content: '';
+  position: absolute;
+  inset: -6px; /* make border thicker */
+  z-index: -1;
+  border-radius: 1.1rem; /* increase for thicker border */
+  padding: 0;
+  background: linear-gradient(120deg, #2dd4bf, #00FFFF, #CCFF00, #A3E635, #4ADE80, #06b6d4, #3b82f6, #FF2D95, #2dd4bf);
+  background-size: 300% 300%;
+  opacity: 0;
+  transition: opacity 0.3s, background-position 0.7s;
+}
+.creative-contact-card:hover::before,
+.creative-contact-card:focus::before,
+.creative-contact-card:active::before {
+  opacity: 1;
+  background-position: 100% 100%;
+  animation: borderGradientMove 2s linear infinite;
+}
+.creative-contact-card-inner {
+  position: relative;
+  z-index: 1;
+  border-radius: 0.75rem;
+  background: #18181b; /* match bg-black/80 */
+  padding: 1.5rem;
+}
+@keyframes borderGradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+} 
