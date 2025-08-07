@@ -11,7 +11,9 @@ const Projects = () => {
   const projects = [
     {
       title: "Wanderlust DevOps CI/CD Pipeline",
-      github: "https://github.com/VaibhaviSugandhi1733/wanderlust_devops.git"
+      description: "A comprehensive DevSecOps automated CI/CD pipeline using Jenkins, SonarQube, OWASP Dependency-Check, and Trivy for security scanning. Features automated testing, Docker containerization, and deployment with quality gates.",
+      github: "https://github.com/VaibhaviSugandhi1733/wanderlust_devops.git",
+      technologies: ["Jenkins", "SonarQube", "Docker", "Trivy", "OWASP Dependency-Check", "DevSecOps", "CI/CD"]
     },
     {
       title: "Multi-Tier Infrastructure: Ansible, K8s, LAMP Stack",
@@ -142,6 +144,38 @@ const Projects = () => {
                       {project.title}
                     </h3>
                   </motion.div>
+
+                  {project.description && (
+                    <motion.p 
+                      className="text-green-200 leading-relaxed font-mono text-sm"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
+                    >
+                      {project.description}
+                    </motion.p>
+                  )}
+
+                  {project.technologies && (
+                    <motion.div 
+                      className="flex flex-wrap gap-2"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 1.2 + index * 0.1, duration: 0.6 }}
+                    >
+                      {project.technologies.map((tech, techIndex) => (
+                        <motion.span
+                          key={techIndex}
+                          className="tech-badge px-3 py-1 text-green-300 text-xs font-medium rounded font-mono"
+                          whileHover={{ scale: 1.1 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          {tech}
+                        </motion.span>
+                      ))}
+                    </motion.div>
+                  )}
+
                   <motion.div 
                     className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-green-500/30"
                     initial={{ opacity: 0 }}
