@@ -10,98 +10,36 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Flask Docker Deployment with Jenkins CI/CD (Freestyle Job)",
-      description: "A CI/CD pipeline using Jenkins Freestyle Job to build, test, and deploy a Flask application in Docker containers. Automates the process from code commit to deployment.",
-      icon: <Terminal className="text-green-400" size={32} />,
-      github: "https://github.com/VaibhaviSugandhi1733/Flask_app_deployment.git",
-      technologies: ["Flask", "Docker", "Jenkins", "CI/CD", "Python"],
-      features: [
-        "Automated build and deployment",
-        "Jenkins Freestyle Job integration",
-        "Dockerized Flask app",
-        "Continuous Integration and Delivery",
-        "Easy rollback and redeployment"
-      ],
-      commands: [
-        "git clone https://github.com/VaibhaviSugandhi1733/Flask_app_deployment.git",
-        "docker build -t flask-app .",
-        "docker run -p 5000:5000 flask-app"
-      ]
+      title: "Wanderlust DevOps CI/CD Pipeline",
+      github: "https://github.com/VaibhaviSugandhi1733/wanderlust_devops.git"
     },
     {
-      title: "Custom Ansible Cluster in Docker + Kubernetes",
-      description: "Manual setup of Ansible master and managed nodes using Red Hat-based Docker containers deployed in Kubernetes Pods with SSH configuration.",
-      icon: <Container className="text-green-300" size={32} />,
-      github: "https://github.com/VaibhaviSugandhi1733/AnsibleClusterSetup.git",
-      technologies: ["Ansible", "Docker", "Kubernetes", "SSH", "Red Hat"],
-      features: [
-        "Custom Ansible cluster configuration",
-        "Kubernetes Pod deployment",
-        "SSH key management", 
-        "Red Hat container images",
-        "Automated provisioning"
-      ],
-      commands: [
-        "kubectl apply -f ansible-cluster.yaml",
-        "ansible-playbook -i inventory site.yml",
-        "ssh ansible-master 'ansible all -m ping'"
-      ]
+      title: "Multi-Tier Infrastructure: Ansible, K8s, LAMP Stack",
+      github: "https://github.com/VaibhaviSugandhi1733/VaibhaviSugandhi1733-Multi-Tier-Infrastucture-Ansible-K8-LAMP-Stack.git"
     },
     {
-      title: "Web Scraper using Python & Docker",
-      description: "A scalable web scraping solution built with Python, featuring CSV export capabilities, robust error handling, and containerized deployment with Docker.",
-      icon: <Code className="text-green-400" size={32} />,
-      github: "https://github.com/VaibhaviSugandhi1733/Web-Scrapper-project.git",
-      technologies: ["Python", "Docker", "BeautifulSoup", "Requests", "CSV"],
-      features: [
-        "Automated web data extraction",
-        "CSV export functionality", 
-        "Error handling and logging",
-        "Containerized deployment",
-        "Scalable scraping logic"
-      ],
-      commands: [
-        "docker build -t web-scraper .",
-        "docker run -v $(pwd)/data:/app/data web-scraper",
-        "python scraper.py --output data.csv"
-      ]
+      title: "DevOps Workflow",
+      github: "https://github.com/VaibhaviSugandhi1733/devops-workflow.git"
     },
     {
-      title: "File Management using Python",
-      description: "A command-line interface tool for organizing and managing local files efficiently with various sorting and categorization options.",
-      icon: <FileText className="text-green-500" size={32} />,
-      github: "https://github.com/VaibhaviSugandhi1733/File-Management.git",
-      technologies: ["Python", "CLI", "OS Module", "File System"],
-      features: [
-        "File organization automation",
-        "Multiple sorting options",
-        "Command-line interface",
-        "Batch file operations",
-        "Safe file handling"
-      ],
-      commands: [
-        "python file_manager.py --organize ~/Downloads",
-        "python file_manager.py --sort-by date",
-        "./file_manager.py --help"
-      ]
+      title: "CI/CD with Jenkins, Ansible, Docker",
+      github: "https://github.com/VaibhaviSugandhi1733/CICD-Jenkins-ansible-docker.git"
     },
     {
-      title: "Chromakey – Simple Green Screen Web App",
-      description: "A web application that allows users to apply chromakey (green screen) effects to images or videos directly in the browser. Built for easy background removal and creative compositing.",
-      icon: <Code className='text-green-400' size={32} />,
-      github: "https://github.com/VaibhaviSugandhi1733/chromakey.git",
-      technologies: ["JavaScript", "HTML5", "Canvas", "Web App", "Chromakey"],
-      features: [
-        "Real-time green screen effect",
-        "Easy image/video upload",
-        "Adjustable chromakey tolerance",
-        "Download composited result",
-        "No server required (client-side only)"
-      ],
-      commands: [
-        "git clone https://github.com/VaibhaviSugandhi1733/chromakey.git",
-        "Open index.html in your browser"
-      ]
+      title: "Flask App Deployment",
+      github: "https://github.com/VaibhaviSugandhi1733/Flask_app_deployment.git"
+    },
+    {
+      title: "Containerized Microservice",
+      github: "https://github.com/VaibhaviSugandhi1733/containerized-microservice.git"
+    },
+    {
+      title: "Ansible Cluster Setup",
+      github: "https://github.com/VaibhaviSugandhi1733/AnsibleClusterSetup.git"
+    },
+    {
+      title: "File Management System",
+      github: "https://github.com/VaibhaviSugandhi1733/File-Management.git"
     }
   ];
 
@@ -198,85 +136,12 @@ const Projects = () => {
                     transition={{ duration: 0.2 }}
                   >
                     <div className="p-3 rounded bg-black/50 neon-border">
-                      {project.icon}
+                      <Code className="text-green-400" size={32} />
                     </div>
                     <h3 className="text-lg font-bold text-green-300 font-mono">
                       {project.title}
                     </h3>
                   </motion.div>
-
-                  <motion.p 
-                    className="text-green-200 leading-relaxed font-mono text-sm"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
-                  >
-                    {project.description}
-                  </motion.p>
-
-                  <motion.div 
-                    className="space-y-3"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
-                  >
-                    <h4 className="font-semibold text-green-300 font-mono"># Features:</h4>
-                    <ul className="space-y-1">
-                      {project.features.map((feature, featureIndex) => (
-                        <motion.li 
-                          key={featureIndex} 
-                          className="text-sm text-green-200 flex items-center font-mono"
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: 0.7 + featureIndex * 0.05, duration: 0.4 }}
-                        >
-                          <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></span>
-                          {feature}
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </motion.div>
-
-                  <motion.div 
-                    className="space-y-3"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }}
-                  >
-                    <h4 className="font-semibold text-green-300 font-mono"># Usage:</h4>
-                    <div className="bg-black/50 p-3 rounded text-xs font-mono space-y-1">
-                      {project.commands.map((command, cmdIndex) => (
-                        <motion.div 
-                          key={cmdIndex} 
-                          className="text-green-400"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ delay: 1.0 + cmdIndex * 0.1, duration: 0.4 }}
-                        >
-                          $ {command}
-                        </motion.div>
-                      ))}
-                    </div>
-                  </motion.div>
-
-                  <motion.div 
-                    className="flex flex-wrap gap-2"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1.2 + index * 0.1, duration: 0.6 }}
-                  >
-                    {project.technologies.map((tech, techIndex) => (
-                      <motion.span
-                        key={techIndex}
-                        className="tech-badge px-3 py-1 text-green-300 text-xs font-medium rounded font-mono"
-                        whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        {tech}
-                      </motion.span>
-                    ))}
-                  </motion.div>
-
                   <motion.div 
                     className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-green-500/30"
                     initial={{ opacity: 0 }}
@@ -305,28 +170,6 @@ const Projects = () => {
                       <Github size={18} className="relative z-10 group-hover:rotate-12 transition-transform duration-300" />
                       <span className="relative z-10 font-semibold">git clone</span>
                       <div className="absolute inset-0 border border-green-500/30 rounded group-hover:border-green-400/60 transition-colors duration-300"></div>
-                    </motion.a>
-                    
-                    <motion.a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="github-view-btn group flex items-center justify-center space-x-2 bg-gradient-to-r from-green-500/20 to-green-400/20 hover:from-green-500/30 hover:to-green-400/30 text-green-300 hover:text-green-400 transition-all duration-300 font-mono text-sm px-4 py-3 rounded cursor-pointer relative overflow-hidden"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        console.log('Opening GitHub link:', project.github);
-                        window.open(project.github, '_blank', 'noopener,noreferrer');
-                      }}
-                      whileHover={{ 
-                        scale: 1.03, 
-                        y: -1,
-                        boxShadow: "0 0 15px rgba(34, 197, 94, 0.4)",
-                        transition: { duration: 0.3 }
-                      }}
-                      whileTap={{ scale: 0.97 }}
-                    >
-                      <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
-                      <span className="font-semibold">View Code</span>
                     </motion.a>
                   </motion.div>
                 </div>
