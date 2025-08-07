@@ -37,15 +37,6 @@ const Skills = () => {
       ]
     },
     {
-      category: "Frontend",
-      icon: <Globe className="text-green-500" size={24} />,
-      skills: [
-        { name: "HTML", level: 85, command: "<!DOCTYPE html>" },
-        { name: "CSS", level: 80, command: "body { color: #22c55e; }" },
-        { name: "JavaScript", level: 75, command: "console.log('Hello');" }
-      ]
-    },
-    {
       category: "Version Control",
       icon: <GitBranch className="text-green-400" size={24} />,
       skills: [
