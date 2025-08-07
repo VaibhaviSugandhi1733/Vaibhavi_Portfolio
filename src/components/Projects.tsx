@@ -17,31 +17,45 @@ const Projects = () => {
     },
     {
       title: "Multi-Tier Infrastructure: Ansible, K8s, LAMP Stack",
-      github: "https://github.com/VaibhaviSugandhi1733/VaibhaviSugandhi1733-Multi-Tier-Infrastucture-Ansible-K8-LAMP-Stack.git"
+      description: "A comprehensive multi-tier infrastructure setup using Ansible for automation, Kubernetes for orchestration, and LAMP stack for web applications. Implements scalable, containerized deployment with automated provisioning.",
+      github: "https://github.com/VaibhaviSugandhi1733/VaibhaviSugandhi1733-Multi-Tier-Infrastucture-Ansible-K8-LAMP-Stack.git",
+      technologies: ["Ansible", "Kubernetes", "Docker", "LAMP Stack", "Linux", "Apache", "MySQL", "PHP", "Infrastructure as Code"]
     },
     {
       title: "DevOps Workflow",
-      github: "https://github.com/VaibhaviSugandhi1733/devops-workflow.git"
+      description: "A streamlined DevOps workflow implementation showcasing best practices for continuous integration, deployment automation, and infrastructure management. Features automated testing, deployment pipelines, and monitoring integration.",
+      github: "https://github.com/VaibhaviSugandhi1733/devops-workflow.git",
+      technologies: ["CI/CD", "Git", "Docker", "Jenkins", "Monitoring", "Automation", "DevOps", "Infrastructure Management"]
     },
     {
       title: "CI/CD with Jenkins, Ansible, Docker",
-      github: "https://github.com/VaibhaviSugandhi1733/CICD-Jenkins-ansible-docker.git"
+      description: "A robust CI/CD pipeline integrating Jenkins for automation, Ansible for configuration management, and Docker for containerization. Enables automated build, test, and deployment workflows for modern applications.",
+      github: "https://github.com/VaibhaviSugandhi1733/CICD-Jenkins-ansible-docker.git",
+      technologies: ["Jenkins", "Ansible", "Docker", "CI/CD", "Automation", "Configuration Management", "DevOps"]
     },
     {
       title: "Flask App Deployment",
-      github: "https://github.com/VaibhaviSugandhi1733/Flask_app_deployment.git"
+      description: "A CI/CD pipeline for deploying a Flask web application using Jenkins and Docker. Automates the process from code commit to containerized deployment, ensuring rapid and reliable releases.",
+      github: "https://github.com/VaibhaviSugandhi1733/Flask_app_deployment.git",
+      technologies: ["Flask", "Python", "Jenkins", "Docker", "CI/CD", "Web Application", "Automation"]
     },
     {
       title: "Containerized Microservice",
-      github: "https://github.com/VaibhaviSugandhi1733/containerized-microservice.git"
+      description: "A microservice application designed and deployed using Docker containers. Demonstrates best practices in containerization, service isolation, and scalable deployment for cloud-native environments.",
+      github: "https://github.com/VaibhaviSugandhi1733/containerized-microservice.git",
+      technologies: ["Microservices", "Docker", "Containerization", "Cloud-Native", "DevOps", "Service Isolation"]
     },
     {
       title: "Ansible Cluster Setup",
-      github: "https://github.com/VaibhaviSugandhi1733/AnsibleClusterSetup.git"
+      description: "A comprehensive Ansible cluster configuration and setup automation. Implements automated provisioning, configuration management, and orchestration for multi-node environments with centralized control.",
+      github: "https://github.com/VaibhaviSugandhi1733/AnsibleClusterSetup.git",
+      technologies: ["Ansible", "Cluster Management", "Configuration Management", "Automation", "SSH", "Infrastructure as Code"]
     },
     {
       title: "File Management System",
-      github: "https://github.com/VaibhaviSugandhi1733/File-Management.git"
+      description: "A Python-based file management system for organizing and managing local files efficiently. Features automated file sorting, categorization, and batch operations with a command-line interface.",
+      github: "https://github.com/VaibhaviSugandhi1733/File-Management.git",
+      technologies: ["Python", "File System", "CLI", "Automation", "File Organization", "Batch Processing"]
     }
   ];
 
